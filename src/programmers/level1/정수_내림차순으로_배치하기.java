@@ -2,7 +2,7 @@ package programmers.level1;
 
 import java.util.*;
 
-public class Desc_Int {
+public class 정수_내림차순으로_배치하기 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("정수를 입력하세요 : ");
