@@ -1,9 +1,8 @@
 package programmers.level1;
 
 import java.util.*;
-import java.io.*;
 
-public class Sum_NumOfDigit {
+public class 자릿수_더하기 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("정수 입력 : ");

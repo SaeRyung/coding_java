@@ -1,9 +1,8 @@
 package programmers.level1;
 
-import java.io.*;
 import java.util.*;
 
-public class ChangeStrToInt {
+public class 문자열을_정수로_바꾸기 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("문자열을 입력하세요 : ");

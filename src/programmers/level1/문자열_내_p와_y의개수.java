@@ -1,9 +1,8 @@
 package programmers.level1;
 
 import java.util.*;
-import java.io.*;
 
-public class Count_py {
+public class 문자열_내_p와_y의개수 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("문자열을 입력하세요 : ");

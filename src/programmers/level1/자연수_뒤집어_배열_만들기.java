@@ -1,9 +1,8 @@
 package programmers.level1;
 
 import java.util.*;
-import java.io.*;
 
-public class ReverseNum {
+public class 자연수_뒤집어_배열_만들기 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

@@ -1,9 +1,8 @@
 package programmers.level1;
 
 import java.util.*;
-import java.io.*;
 
-public class Space_X_Count_N {
+public class x만큼_간격이_있는_n개의_숫자 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
