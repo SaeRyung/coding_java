@@ -18,8 +18,6 @@ public class Desc_Int {
             result[i] = Integer.parseInt(inputNum[i]);
         }
 
-//        Arrays.sort(result);
-
 
         for(int i=0; i<len; i++){
             int temp = 0;
