@@ -23,16 +23,29 @@ public class Q2684 {
 
         for(int i=0; i<arrLen; i++){
             String key = arr[i];
+            dic.put(key,0);
             int count = 0;
-            for(int j=0; j<len; j++){
-                String coin = str.substring(i,i+3);
+            for(int j=0; j<len-2; j++){
+                // 글자 차례대로 3개씩 자르기
+                String coin = str.substring(j,j+3);
+                // 키값과 글자값이 같을 시
                 if(coin.equals(arr[i])){
                     count++;
                 }
                 dic.put(key,count);
             }
         }
+        // 키를 기준으로 정렬
+//        Map<String, Integer> sortedDic = new TreeMap<>(dic);
+//        Collections.reverse((List<?>) dic);
+//        List<String> result = new ArrayList<>(dic.keySet()); //정렬 위해 ArrayList 준비
+//        Collections.sort(result, Collections.reverseOrder());
+
+
         Collection<Integer> values = dic.values();
+        Collection<String> key = dic.keySet();
+
+        System.out.println(key);
         System.out.println(values);
     }
 }
