@@ -31,8 +31,23 @@ public class Q1157 {
         }
         // 최대 Value값
         Integer maxValue = Collections.max(dic.values());
+        // count 로 최대값 찾기
+        int count = 0;
+        // 최대값으 가지는 키값 넣을 변수
+        String answer = "";
 
+        for(String s:dic.keySet()){
+            if(dic.get(s) == maxValue){
+                count++;
+                answer = s;
+            }
+            if(count == 2){
+                answer = "?";
+                break;
 
+            }
+        }
+        System.out.println(answer);
 
     }
 }
