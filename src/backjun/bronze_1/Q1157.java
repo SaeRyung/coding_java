@@ -1,16 +1,13 @@
 package backjun.bronze_1;
 
 import java.util.*;
-
-
+// 단어공부
 public class Q1157 {
     public static void main(String[] args) {
-//        Scanner input = new Scanner(System.in);
-//        System.out.print("알파벳 입력 : ");
-        // 문자열 대문자로 변환
-//        String str = input.nextLine().toUpperCase();
-
-        String str = "aabac";
+        Scanner input = new Scanner(System.in);
+        System.out.print("알파벳 입력 : ");
+//         문자열 대문자로 변환
+        String str = input.nextLine().toUpperCase();
 
         int len = str.length();
 
