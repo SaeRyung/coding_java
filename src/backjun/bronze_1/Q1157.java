@@ -41,6 +41,7 @@ public class Q1157 {
                 count++;
                 answer = s;
             }
+            // 최대값이 두 개 이상이면
             if(count == 2){
                 answer = "?";
                 break;
