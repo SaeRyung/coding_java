@@ -7,10 +7,10 @@ public class Q2684 {
         String str = input.nextLine();
         int len = str.length();
 
-        String[] arr = {"HHH", "HHT", "HTH", "HTT", "THH", "THT", "TTH", "TTT"};
+        String[] arr = {"TTT", "TTH", "THT", "THH", "HTT", "HTH","HHT","HHH"};
         int arrLen = arr.length;
 
-        Map<String, Integer> dic = new HashMap<>();
+        Map<String, Integer> dic = new LinkedHashMap<>();
 
 //        String HHH = "HHH"; // 앞앞앞
 //        String HHT = "HHT"; // 앞앞뒤
@@ -22,8 +22,8 @@ public class Q2684 {
 //        String TTT = "TTT"; // 뒤뒤뒤
 
         for(int i=0; i<arrLen; i++){
-            String key = arr[i];
-            dic.put(key,0);
+//            String key = arr[i];
+            dic.put(arr[i],0);
             int count = 0;
             for(int j=0; j<len-2; j++){
                 // 글자 차례대로 3개씩 자르기
@@ -32,7 +32,7 @@ public class Q2684 {
                 if(coin.equals(arr[i])){
                     count++;
                 }
-                dic.put(key,count);
+                dic.put(arr[i],count);
             }
         }
         // 키를 기준으로 정렬
