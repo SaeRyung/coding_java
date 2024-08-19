@@ -1,5 +1,6 @@
 package backjun.bronze_3;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 // 사탕 선생 고창영
@@ -15,15 +16,18 @@ public class Q2547 {
             input.nextLine(); //개행
 
             while(check){
-                long sum = 0;
+                BigInteger sum = new BigInteger("0");
 
                 long student = input.nextLong(); // 학생 수 받기
                 for(int i=0; i<student; i++){ // 학생 수만큼 반복문
                     long candy = input.nextLong(); // 걱걱 학생들이 가져온 사탕값 받기
-                    sum += candy; // 전체 사탕 개수 더하기
+//                    sum += candy; // 전체 사탕 개수 더하기
+                    sum = sum.add(BigInteger.valueOf(candy));
                 }
 
-                if(sum % student == 0){
+                int bigNum = sum.intValue();
+
+                if(bigNum % student == 0){
                     result += "YES"; //사탕개수 동일하게 학생들이 받으면 YES
                 }else{
                     result += "NO"; // 사탕개수 동일하지 않으면 NO
