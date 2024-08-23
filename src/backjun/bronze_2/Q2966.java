@@ -2,6 +2,7 @@ package backjun.bronze_2;
 // 찍기
 
 import java.io.*;
+import java.util.*;
 
 public class Q2966{
     public static void main(String[] args) throws IOException {
@@ -69,25 +70,22 @@ public class Q2966{
             }
         }
 
-        if(BrunoNum > AdrianNum && BrunoNum > GoranNum){
-            System.out.println(BrunoNum);
-            System.out.println("Bruno");
-        } else if (AdrianNum > BrunoNum && AdrianNum > GoranNum){
-            System.out.println(AdrianNum);
-            System.out.println("Adrian");
-        } else if(GoranNum > AdrianNum && GoranNum > BrunoNum){
-            System.out.println(GoranNum);
-            System.out.println("Goran");
-        } else if(AdrianNum == BrunoNum && AdrianNum == GoranNum) {
-            System.out.println(AdrianNum);
-            System.out.println("Adrian");
-            System.out.println("Bruno");
-            System.out.println("Goran");
+
+        Map<String,Integer> map = new LinkedHashMap<>(); //key, value값으로 순서별 값 넣기
+        map.put("Adrian",AdrianNum);
+        map.put("Bruno",BrunoNum);
+        map.put("Goran",GoranNum);
+
+        Integer maxValue = Collections.max(map.values()); //카운트 최대값 구하기
+
+        System.out.println(maxValue);
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String k = entry.getKey(); //key값(이름)
+            Integer v = entry.getValue(); //value값(카운트)
+            if (v == maxValue) { // 카운트값이 최대값과 같은 값이라면
+                System.out.println(k); //출력
+            }
         }
-
-//        System.out.println(BrunoNum);
-//        System.out.println(AdrianNum);
-//        System.out.println(GoranNum);
-
     }
 }
