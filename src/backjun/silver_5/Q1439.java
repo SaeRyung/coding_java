@@ -27,8 +27,10 @@ public class Q1439 {
             if (!str.substring(i, i + 1).equals(fir)) {
                 // 차례대로 문자열 값이 기준값 fir과 같지 않다면
                 if (str.substring(i, i + 1).equals("0")) {
+                    // 0 일때
                     count0++;
                 } else {
+                    // 1 일때
                     count1++;
                 }
                 fir = str.substring(i, i + 1);
