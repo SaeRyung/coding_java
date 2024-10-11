@@ -1,5 +1,6 @@
 package java.backjun.bronze_1;
 
+
 import java.util.*;
 
 public class Q1110{
